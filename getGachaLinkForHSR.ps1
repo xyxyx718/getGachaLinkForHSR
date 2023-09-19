@@ -49,10 +49,10 @@ foreach ($drive in $drives) {
 
         $fileContent = Get-Content $targetFile -Raw
         $pattern = 'https://api-takumi\.mihoyo\.com/common/gacha_record/api/getGachaLog\?(?=.*authkey=)(?=.*region=)(?=.*gacha_id=)(?=.*gacha_type=).*?(?=\{)'
-        $matches = [regex]::Matches($fileContent, $pattern)
+        $foundMatches = [regex]::Matches($fileContent, $pattern)
 
-        if ($matches.Count -gt 0) {
-            $latestMatch = $matches[$matches.Count - 1]
+        if ($foundMatches.Count -gt 0) {
+            $latestMatch = $foundMatches[$foundMatches.Count - 1]
             Write-Host "最新的有效链接："
             Write-Host "$($latestMatch.Value)`n"
             Write-Host "你可以使用鼠标划动选中后，按下 Ctrl+C 来复制上面的链接。"

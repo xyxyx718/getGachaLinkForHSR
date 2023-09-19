@@ -6,6 +6,18 @@ A powershell script (encoding: gbk) that could find gacha link for Honkai: Star 
 
 Just download and run the script | 直接下载并运行脚本即可
 
+If you encounter a signature error, you can try entering the following command in powershell: | 如果你遇到了签名错误，可以尝试在powershell中输入以下命令：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File path-to-file.ps1
+```
+
+Such as: | 例如：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File C:\Users\username\Downloads\getGachaLinkForHSR.ps1
+```
+
 If you copy the code directly, remember to save it as GBK encoding | 如果你直接复制代码，记得保存为GBK编码
 
 ## How it works | 原理
